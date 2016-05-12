@@ -1,0 +1,25 @@
+{
+  "name": "tDiary.org",
+  "website": "http://www.tdiary.org/",
+  "repository": "https://github.com/tdiary/tdiary-org",
+  "addons": [
+    "sendgrid",
+    "memcachier",
+    "mongolab"
+  ],
+  "scripts": {
+    "postdeploy": "bundle exec rake mongodb:index"
+  },
+  "env": {
+    "TWITTER_KEY": {
+      "required": true
+    },
+    "TWITTER_SECRET": {
+      "required": true
+    },
+    "TWITTER_NAME": {
+      "required": true
+    },
+    "RACK_ENV": "production"
+  }
+}

@@ -1,0 +1,98 @@
+GIT
+  remote: git://github.com/tdiary/tdiary-contrib.git
+  revision: 3f0c6de842d40317336b62698bfd202bb90c4fb6
+  specs:
+    tdiary-contrib (5.0.0)
+      ruby-pushbullet
+      tdiary
+
+GIT
+  remote: git://github.com/tdiary/tdiary-core.git
+  revision: fa905e345655c5dd4ebb3f2ff2f706cf6004d035
+  specs:
+    tdiary (5.0.0.20160512)
+      bundler (~> 1.3)
+      thor (~> 0.18)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    addressable (2.4.0)
+    concurrent-ruby (1.0.2)
+    domain_name (0.5.20160310)
+      unf (>= 0.0.5, < 1.0.0)
+    emot (0.0.4)
+      thor
+    faraday (0.9.2)
+      multipart-post (>= 1.2, < 3)
+    fastimage (2.0.0)
+      addressable (~> 2)
+    github-markdown (0.6.9)
+    hikidoc (0.1.0)
+    http-cookie (1.0.2)
+      domain_name (~> 0.5)
+    json (1.8.3)
+    mail (2.6.4)
+      mime-types (>= 1.16, < 4)
+    memcachier (0.0.2)
+    mime-types (2.99.1)
+    multipart-post (2.0.0)
+    netrc (0.11.0)
+    octokit (4.3.0)
+      sawyer (~> 0.7.0, >= 0.5.3)
+    puma (3.4.0)
+    rack (1.6.4)
+    rake (11.1.2)
+    rdtool (0.6.38)
+    rest-client (1.8.0)
+      http-cookie (>= 1.0.2, < 2.0)
+      mime-types (>= 1.16, < 3.0)
+      netrc (~> 0.7)
+    rouge (1.10.1)
+    ruby-pushbullet (0.1.4)
+      json
+      rest-client (~> 1.8.0)
+    sawyer (0.7.0)
+      addressable (>= 2.3.5, < 2.5)
+      faraday (~> 0.8, < 0.10)
+    sprockets (3.6.0)
+      concurrent-ruby (~> 1.0)
+      rack (> 1, < 3)
+    tdiary-style-gfm (0.3.0)
+      emot
+      github-markdown
+      rouge
+      twitter-text
+    tdiary-style-rd (0.0.3)
+      rdtool
+    thor (0.19.1)
+    twitter-text (1.13.4)
+      unf (~> 0.1.0)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.7.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  emot
+  fastimage
+  hikidoc
+  mail
+  memcachier
+  octokit
+  puma
+  rack
+  rake
+  sprockets
+  tdiary!
+  tdiary-contrib!
+  tdiary-style-gfm
+  tdiary-style-rd
+
+RUBY VERSION
+   ruby 2.3.1p112
+
+BUNDLED WITH
+   1.12.1
