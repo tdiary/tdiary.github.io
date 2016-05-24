@@ -1,9 +1,8 @@
 GIT
   remote: git://github.com/tdiary/tdiary-blogkit.git
-  revision: 1f5ae6cd3907bdbc25ffe5bbacad194eebfee81d
-  branch: gem
+  revision: 4099486a45b61ceba38f3f0e8241500a813b34b2
   specs:
-    tdiary-blogkit (5.0.0.20160517)
+    tdiary-blogkit (5.0.0.20160524)
       hikidoc
       tdiary
       tdiary-style-rd
