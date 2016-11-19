@@ -1,27 +1,34 @@
 GIT
   remote: git://github.com/tdiary/tdiary-blogkit.git
-  revision: 4099486a45b61ceba38f3f0e8241500a813b34b2
+  revision: 26d3162c5d94daf16326b874fe7b9cc9eb852271
   specs:
-    tdiary-blogkit (5.0.0.20160524)
+    tdiary-blogkit (5.0.2)
       hikidoc
       tdiary
       tdiary-style-rd
 
 GIT
   remote: git://github.com/tdiary/tdiary-contrib.git
-  revision: 3f0c6de842d40317336b62698bfd202bb90c4fb6
+  revision: a4defd22264a0820cee72f0052427151fdf00c3d
   specs:
-    tdiary-contrib (5.0.0)
+    tdiary-contrib (5.0.2)
       ruby-pushbullet
       tdiary
 
 GIT
   remote: git://github.com/tdiary/tdiary-core.git
-  revision: fa905e345655c5dd4ebb3f2ff2f706cf6004d035
+  revision: fcf37f2ab3cb54fa6040b9582a03e78c8acbebc3
   specs:
-    tdiary (5.0.0.20160512)
+    tdiary (5.0.2.20161116)
       bundler (~> 1.3)
-      thor (~> 0.18)
+      emot
+      fastimage
+      hikidoc
+      mail
+      rack
+      rake
+      sprockets
+      thor
 
 GIT
   remote: git://github.com/tdiary/tdiary-io-mongodb.git
@@ -34,43 +41,44 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
-    activemodel (4.2.6)
-      activesupport (= 4.2.6)
+    activemodel (4.2.7.1)
+      activesupport (= 4.2.7.1)
       builder (~> 3.1)
-    activesupport (4.2.6)
+    activesupport (4.2.7.1)
       i18n (~> 0.7)
       json (~> 1.7, >= 1.7.7)
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
-    addressable (2.4.0)
+    addressable (2.5.0)
+      public_suffix (~> 2.0, >= 2.0.2)
     bson (4.1.1)
     builder (3.2.2)
     concurrent-ruby (1.0.2)
     dalli (2.7.6)
-    domain_name (0.5.20160310)
+    domain_name (0.5.20161021)
       unf (>= 0.0.5, < 1.0.0)
     emot (0.0.4)
       thor
-    faraday (0.9.2)
+    faraday (0.10.0)
       multipart-post (>= 1.2, < 3)
-    fastimage (2.0.0)
+    fastimage (2.0.1)
       addressable (~> 2)
     github-markdown (0.6.9)
-    hashie (3.4.4)
+    hashie (3.4.6)
     hikidoc (0.1.0)
-    http-cookie (1.0.2)
+    http-cookie (1.0.3)
       domain_name (~> 0.5)
     i18n (0.7.0)
     json (1.8.3)
     mail (2.6.4)
       mime-types (>= 1.16, < 4)
     memcachier (0.0.2)
-    mime-types (2.99.1)
-    minitest (5.9.0)
-    mongo (2.2.5)
-      bson (~> 4.0)
-    mongoid (5.1.3)
+    mime-types (2.99.3)
+    minitest (5.9.1)
+    mongo (2.3.1)
+      bson (~> 4.1)
+    mongoid (5.1.5)
       activemodel (~> 4.0)
       mongo (~> 2.1)
       origin (~> 2.2)
@@ -78,8 +86,8 @@ GEM
     multipart-post (2.0.0)
     netrc (0.11.0)
     oauth (0.5.1)
-    octokit (4.3.0)
-      sawyer (~> 0.7.0, >= 0.5.3)
+    octokit (4.6.1)
+      sawyer (~> 0.8.0, >= 0.5.3)
     omniauth (1.3.1)
       hashie (>= 1.2, < 4)
       rack (>= 1.0, < 3)
@@ -89,35 +97,36 @@ GEM
     omniauth-twitter (1.2.1)
       json (~> 1.3)
       omniauth-oauth (~> 1.1)
-    origin (2.2.0)
-    puma (3.4.0)
-    rack (1.6.4)
-    rake (11.1.2)
+    origin (2.2.2)
+    public_suffix (2.0.4)
+    puma (3.6.0)
+    rack (2.0.1)
+    rake (11.3.0)
     rdtool (0.6.38)
     rest-client (1.8.0)
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 3.0)
       netrc (~> 0.7)
-    rouge (1.10.1)
+    rouge (2.0.7)
     ruby-pushbullet (0.1.4)
       json
       rest-client (~> 1.8.0)
-    sawyer (0.7.0)
-      addressable (>= 2.3.5, < 2.5)
-      faraday (~> 0.8, < 0.10)
-    sprockets (3.6.0)
+    sawyer (0.8.1)
+      addressable (>= 2.3.5, < 2.6)
+      faraday (~> 0.8, < 1.0)
+    sprockets (3.7.0)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
-    tdiary-style-gfm (0.3.0)
+    tdiary-style-gfm (0.4.0)
       emot
       github-markdown
-      rouge
+      rouge (>= 2.0)
       twitter-text
     tdiary-style-rd (0.0.3)
       rdtool
     thor (0.19.1)
     thread_safe (0.3.5)
-    twitter-text (1.13.4)
+    twitter-text (1.14.1)
       unf (~> 0.1.0)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
@@ -150,7 +159,7 @@ DEPENDENCIES
   tdiary-style-rd
 
 RUBY VERSION
-   ruby 2.3.1p112
+   ruby 2.3.2p217
 
 BUNDLED WITH
-   1.12.1
+   1.13.6
