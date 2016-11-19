@@ -139,18 +139,11 @@ PLATFORMS
 
 DEPENDENCIES
   dalli
-  emot
-  fastimage
-  hikidoc
-  mail
   memcachier
   octokit
   omniauth
   omniauth-twitter
   puma
-  rack
-  rake
-  sprockets
   tdiary!
   tdiary-blogkit!
   tdiary-contrib!

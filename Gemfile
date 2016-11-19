@@ -1,14 +1,6 @@
 source 'https://rubygems.org'
 ruby '2.3.2'
 
-gem 'rack'
-gem 'sprockets'
-gem 'hikidoc'
-gem 'fastimage'
-gem 'emot'
-gem 'mail'
-gem 'rake'
-
 gem 'puma', require: false
 
 gem 'tdiary', github: 'tdiary/tdiary-core'
