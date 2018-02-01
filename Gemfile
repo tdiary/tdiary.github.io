@@ -1,12 +1,12 @@
 source 'https://rubygems.org'
-ruby '2.3.2'
+ruby '2.5.0'
 
 gem 'puma', require: false
 
-gem 'tdiary', github: 'tdiary/tdiary-core'
-gem 'tdiary-io-mongodb', github: 'tdiary/tdiary-io-mongodb'
-gem 'tdiary-contrib', github: 'tdiary/tdiary-contrib'
-gem 'tdiary-blogkit', github: 'tdiary/tdiary-blogkit'
+gem 'tdiary', git: 'https://github.com/tdiary/tdiary-core'
+gem 'tdiary-io-mongodb', git: 'https://github.com/tdiary/tdiary-io-mongodb'
+gem 'tdiary-contrib', git: 'https://github.com/tdiary/tdiary-contrib'
+gem 'tdiary-blogkit', git: 'https://github.com/tdiary/tdiary-blogkit'
 gem 'tdiary-style-gfm'
 gem 'tdiary-style-rd'
 
