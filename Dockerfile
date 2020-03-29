@@ -10,4 +10,4 @@ RUN echo 'gem "tdiary-io-mongodb"' >> Gemfile.local; \
     bundle --path=vendor/bundle --without=development:test --jobs=4 --retry=3; \
     sed -i "s/@data_path.*$/require 'tempfile'\n@data_path = Dir.tmpdir/" tdiary.conf; \
     sed -i "s/@style.*$/@style = 'BlogWiki'\n\n@io_class = TDiary::IO::MongoDB\n@database_url = ENV['MONGODB_URI'] || ENV['MONGOLAB_URI']\n@logger = Logger.new(\$stderr)/" tdiary.conf
-COPY ["theme/tdiaryorg", "theme"]
+COPY ["theme/tdiaryorg/", "theme/tdiaryorg/"]
