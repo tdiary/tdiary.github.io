@@ -1,12 +1,12 @@
 setup:
-	addons:
-		- plan: sendgrid
-		- plan: memcachier
-		- plan: mongolab
+  addons:
+    - plan: sendgrid
+    - plan: memcachier
+    - plan: mongolab
 build:
-	docker:
-		web: Dockerfile
-	config:
-		RACK_ENV: production
+  docker:
+    web: Dockerfile
+  config:
+    RACK_ENV: production
 run:
   web: bundle exec puma -p $PORT
