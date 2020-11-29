@@ -5,8 +5,7 @@
   "repository": "https://github.com/tdiary/tdiary-org",
   "addons": [
     "sendgrid",
-    "memcachier",
-    "mongolab"
+    "memcachier"
   ],
   "scripts": {
     "postdeploy": "bundle exec rake mongodb:index"
