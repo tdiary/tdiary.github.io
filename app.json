@@ -1,5 +1,5 @@
 {
-  "stack": "container"
+  "stack": "container",
   "name": "tDiary.org",
   "website": "http://www.tdiary.org/",
   "repository": "https://github.com/tdiary/tdiary-org",
