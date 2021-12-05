@@ -5,7 +5,7 @@ WORKDIR /usr/src/app
 RUN echo 'gem "tdiary-io-mongodb"' >> Gemfile.local; \
     echo 'gem "omniauth"' >> Gemfile.local; \
     echo 'gem "omniauth-twitter"' >> Gemfile.local; \
-    echo 'gem "dalli"' >> Gemfile.local; \
+    echo 'gem "dalli", "< 3"' >> Gemfile.local; \
     echo 'gem "memcachier"' >> Gemfile.local; \
     bundle --path=vendor/bundle --without=development:test --jobs=4 --retry=3; \
     sed -i "s/@data_path.*$/require 'tempfile'\n@data_path = Dir.tmpdir/" tdiary.conf; \
