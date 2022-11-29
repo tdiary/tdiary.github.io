@@ -30,7 +30,6 @@ twitter_username: tDiary
 github_username:  tdiary
 
 # Build settings
-theme: tdiary-org-theme
 plugins:
   - jekyll-feed
   - jekyll-paginate
