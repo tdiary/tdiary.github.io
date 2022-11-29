@@ -1,0 +1,113 @@
+---
+leyout: post
+title: 同一サーバで複数のtDiaryを運営する方法
+date: 2011-11-03 17:48:28 +0900
+---
+ 単一のWebサーバ上で、複数のtDiaryを運用したい場合があります(<a href="http://www.tdiary.net/">tDiary.Net</a>のように)。個々の日記をそれぞれ別のtDiaryで運用してもいいのですが、バージョンアップなどが面倒です。
+ こういう場合に、単一のインストールイメージで複数の日記を運用できる仕組みが、tDiaryには備わっています。以下にその手順を解説します。この方法は、tDiary.Netで使われているものとぼほ同じです。
+
+tDiaryのインストール
+バージョンアップを簡単にするために、Gitを使ってtDiaryをインストールします。ここでは最新版(master/HEAD)を使うことにします。ただし、<%=my '20021112', 'ダウンロードページ'%>にもあるように、Git版は非常に不安定な状態にある可能性があります。トラブルを自分で回避する自信がない場合はパッケージを使いましょう。
+
+さて、とりあえずインストール先を「/usr/local/share/tdiary」としましょう。
+
+<pre>
+# mkdir /usr/local/share/tdiary
+# cd /usr/local/share/tdiary
+# git clone git://github.com/tdiary/tdiary-core.git core
+# git clone git://github.com/tdiary/tdiary-theme.git theme
+(以下略)
+</pre>
+
+これで、/usr/local/share/tdiaryの下に、core、themeの各パッケージのディレクトリができました。また、themeの中身を、core/themeの下にシンボリックリンクを張っておきます。
+
+<pre>
+# cd /usr/local/share/tdiary/core/theme
+# ln -s ../../theme/* .
+</pre>
+
+テーマとJavaScriptの設定
+通常、/usr/local/share/tdiary/themeはWebサーバで公開されていませんから、公開しているところにシンボリックリンクを張らなければなりません。公開ディレクトリを「/home/httpd/html」とし、このトップに置くことにします。また同様に、JavaScriptの入ったjsディレクトリも、Webサーバから参照できるようにしておかなくてはいけません。
+
+<pre>
+# cd /home/httpd/html
+# ln -s /usr/local/share/tdiary/core/theme theme
+# ln -s /usr/local/share/tdiary/core/js js
+</pre>
+
+また、シンボリックリンクが使えるように、Apacheの設定でFollowSymLinksを設定しておく必要があります。
+
+これだけではtDiaryが正しいテーマのURLを埋め込んでくれないので、以下のプラグインを書いて、「/usr/local/share/tdiary/plugin」に置いておきます。
+
+<pre>
+# change_url.rb
+def theme_url
+   '/theme'
+end
+ 
+def js_url
+   '/js'
+end
+</pre>
+
+共通のtdiary.conf
+ 複数の日記それぞれにtdiary.confを設置するのは、重複する情報もあり、効率が悪いです。サーバ側の設定を変えたいときにも、共通の設定ができていれば、一ヶ所修正するだけで済みます。@headerや@footerをあらかじめ設定しておくことで、初めて使うユーザに適切なメッセージを送ることもできます。
+ そこで、個々の日記のtdiary.confから読み込まれる、共通のtdiary.confを用意しておきましょう。ファイル名は「/etc/tdiary.conf」とします。仕掛けは、変数「@user_name」です。これで一括変換できます。
+
+<pre>
+# shared tdiary.conf
+@data_path = "/var/tdiary/#{@user_name}"
+@smtp_host = 'localhost'
+@author_name = "#{@user_name}"
+@mail_header = "#{@user_name}"
+@html_title = "#{@user_name}日記"
+ 
+@header = &lt;&lt;HEADER
+&lt;%=navi%&gt;
+&lt;h1&gt;#{@user_name}日記&lt;/h1&gt;
+&lt;%=calendar%&gt;
+HEADER
+ 
+@footer = &lt;&lt;FOOTER
+&lt;%=calendar%&gt;
+&lt;%=navi%&gt;
+FOOTER
+ 
+@options['apply_plugin'] = true
+@options['sp.path'] = '/usr/share/tdiary/core/misc/plugin'
+ 
+@secure = true
+load_cgi_conf
+</pre>
+
+これで、設定画面からユーザごとに好きなプラグインを選択可能です。ここでは最小限の設定をしていますが、付属のtdiary.conf.beginnerをベースにしても良いでしょう。
+
+@secureはデフォルトでtrueにしておきましょう。falseにしたい場合は、あとで設置する個々の日記用のtdiary.conf内で指定できます。また、必要に応じて@no_refererや@referer_tableも設定しておくと各ユーザが設定する手間を省けます。
+
+各日記の設定
+個々の日記は、インストールしたtDiaryのindex.rbとupdate.rbにシンボリックリンクを張ることで実現します。例えばユーザ「hoge」の日記を「/home/hoge/public_html/diary」に置く場合です。
+
+<pre>
+# cd /home/hoge/public_html
+# mkdir diary
+# cd diary
+# ln -s /usr/local/share/tdiary/core/index.rb index.rb
+# ln -s /usr/local/share/tdiary/core/update.rb update.rb
+</pre>
+
+ この他に、付属のdot.htaccessを適当に修正して.htaccessとする必要があります(もちろんhttpd.confで設定してもかまいません)。また、htpasswdコマンドでパスワードを設定する必要があります。
+ それから、日記のデータの置き場所を作成しておくのを忘れないようにしましょう。@data_pathには<code>/var/tdiary/#{@user_name}</code>を指定してありますから、この場合は<code>/var/tdiary/hoge</code>というディレクトリを作成しておきます。このディレクトリは、Webサーバの権限で書き込めるようにしておく必要があります。
+ もし、シンボリックリンクを許可したくない場合には、以下のようなindex.rbを用意することで同等のことが実現できます(update.rbも同様です)。これらのファイルにはWebサーバの実行アカウント権限で実行可能にしておく必要があります。また、suExec環境下の場合は、個々のユーザがindex.rbの所有者である必要がありますから(実行権限もownerに)、以下の方法しか使えません。
+
+<pre>
+#!/usr/bin/ruby
+require '/usr/local/share/tdiary/core/index'
+</pre>
+
+最後に、以下のようなtdiary.confを用意します。
+
+<pre>
+@user_name = 'hoge'
+eval( File::readlines( "/etc/tdiary.conf" ).join.untaint )
+</pre>
+
