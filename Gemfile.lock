@@ -1,7 +1,8 @@
-PATH
-  remote: theme/tdiary-org
+GIT
+  remote: https://github.com/tdiary/tdiary-org-theme.git
+  revision: b8d8fe7fb71c3f5dcdd2be8f2b78a79062a0e1ba
   specs:
-    tdiary-org (0.1.0)
+    tdiary-org-theme (0.1.0)
       jekyll (~> 3.9)
 
 GEM
@@ -265,7 +266,7 @@ DEPENDENCIES
   github-pages (~> 227)
   http_parser.rb (~> 0.6.0)
   jekyll-feed (~> 0.12)
-  tdiary-org!
+  tdiary-org-theme!
   tzinfo (>= 1, < 3)
   tzinfo-data
   wdm (~> 0.1.1)
