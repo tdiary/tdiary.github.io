@@ -37,6 +37,7 @@ plugins:
 show_excerpts: true
 excerpt_separator: "\n\n"
 # paginate: 5
+permalink: /:year:month:day.html
 
 # Exclude from processing.
 # The following items will not be processed, by default.
