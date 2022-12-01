@@ -1,7 +1,6 @@
 ---
 leyout: post
 title:  iPhoneなどのスマートフォン向けデザイン手法
-date: 2010-04-04 15:10:37 +0900
 categories:
   - theme
 ---

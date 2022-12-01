@@ -1,7 +1,6 @@
 ---
 leyout: post
 title:  tDiaryの脆弱性に関する報告(2007-07-23)
-date: 2007-12-14 17:18:10 +0900
 categories:
   - security
 ---

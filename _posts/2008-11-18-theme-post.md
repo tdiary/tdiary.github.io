@@ -1,7 +1,6 @@
 ---
 leyout: post
 title:  tDiaryカスタムテンプレートの紹介
-date: 2008-12-13 18:24:06 +0900
 categories:
   - theme
 ---

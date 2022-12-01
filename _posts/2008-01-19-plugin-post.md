@@ -1,7 +1,6 @@
 ---
 leyout: post
 title:  ツッコミ抜きのフィード(RSS)も生成しましょう
-date: 2011-11-03 17:48:05 +0900
 categories:
   - plugin
 ---

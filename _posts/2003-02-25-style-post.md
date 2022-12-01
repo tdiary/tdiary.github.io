@@ -1,7 +1,6 @@
 ---
 leyout: post
 title:  スタイル機能の使い方
-date: 2003-06-05 02:04:09 +0900
 categories:
   - style
 ---

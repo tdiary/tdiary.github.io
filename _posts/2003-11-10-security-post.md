@@ -1,7 +1,6 @@
 ---
 leyout: post
 title:  tb-show.rbにおけるXSS脆弱性の修正
-date: 2003-11-11 11:47:30 +0900
 categories:
   - security
   - plugin

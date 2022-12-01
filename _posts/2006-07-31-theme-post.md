@@ -1,7 +1,6 @@
 ---
 leyout: post
 title:  9個の色違い新作テーマGlass
-date: 2006-07-31 23:22:42 +0900
 categories:
   - theme
 ---

@@ -1,7 +1,6 @@
 ---
 leyout: post
 title:  tDiaryの脆弱性に関する報告(2010-02-25)
-date: 2010-02-26 16:12:01 +0900
 categories:
   - security
   - 2.2

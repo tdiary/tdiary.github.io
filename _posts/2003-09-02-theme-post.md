@@ -1,7 +1,6 @@
 ---
 leyout: post
 title:  テーマ関連ツールあれこれ
-date: 2005-04-16 12:23:04 +0900
 categories:
   - theme
 ---

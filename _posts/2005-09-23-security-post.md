@@ -1,7 +1,6 @@
 ---
 leyout: post
 title:  Rubyの脆弱性に関する対応のお願い
-date: 2005-09-24 22:47:33 +0900
 categories:
   - security
 ---

@@ -1,7 +1,6 @@
 ---
 leyout: post
 title:  効果的なspamフィルタの設定方法
-date: 2011-11-07 17:34:23 +0900
 categories:
   - filter
 ---

@@ -1,7 +1,6 @@
 ---
 leyout: post
 title:  安定版1.4.5リリース
-date: 2003-04-25 18:16:50 +0900
 categories:
   - release
 ---

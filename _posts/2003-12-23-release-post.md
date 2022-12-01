@@ -1,7 +1,6 @@
 ---
 leyout: post
 title:  tDiary 1.5.6がDebian本家に
-date: 2004-04-05 21:41:39 +0900
 categories:
   - release
 ---

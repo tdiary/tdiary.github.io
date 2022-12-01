@@ -1,7 +1,6 @@
 ---
 leyout: post
 title:  comment_rank.rbにおけるXSS脆弱性の修正
-date: 2003-11-11 11:45:16 +0900
 categories:
   - security
   - plugin

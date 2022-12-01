@@ -1,7 +1,6 @@
 ---
 leyout: post
 title:  ふたたび2.0安定版Amazonプラグインの更新
-date: 2006-11-26 18:25:59 +0900
 categories:
   - plugin
   - amazon

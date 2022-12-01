@@ -1,7 +1,6 @@
 ---
 leyout: post
 title:  tDiary 3.0.0リリース
-date: 2010-12-23 12:27:30 +0900
 categories:
   - release
   - 3.0

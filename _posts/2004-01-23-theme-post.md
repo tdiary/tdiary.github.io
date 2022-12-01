@@ -1,7 +1,6 @@
 ---
 leyout: post
 title:  テーマ一覧Flash
-date: 2004-05-22 15:58:58 +0900
 categories:
   - theme
 ---

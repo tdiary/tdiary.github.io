@@ -1,7 +1,6 @@
 ---
 leyout: post
 title:  tDiary 1.5.4リリース
-date: 2003-08-31 23:24:41 +0900
 categories:
   - release
 ---

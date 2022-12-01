@@ -1,7 +1,6 @@
 ---
 leyout: post
 title:  Amazonプラグインの更新
-date: 2006-09-03 15:10:33 +0900
 categories:
   - plugin
   - amazon

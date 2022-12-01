@@ -1,7 +1,6 @@
 ---
 leyout: post
 title: tDiary-5.0.0 リリース
-date: 2016-03-30 05:53:31 +0900
 categories:
   - release
   - 5.0

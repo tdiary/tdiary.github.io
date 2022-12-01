@@ -1,7 +1,6 @@
 ---
 leyout: post
 title:  socialbuttonプラグインにおけるはてなブックマークボタンのトラッキング拒否について
-date: 2012-03-10 21:35:02 +0900
 categories:
   - plugin
 ---
