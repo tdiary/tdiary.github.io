@@ -1,7 +1,6 @@
 ---
 leyout: post
 title:  テーマが大量追加
-date: 2005-02-03 16:30:49 +0900
 categories:
   - theme
 ---

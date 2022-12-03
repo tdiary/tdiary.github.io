@@ -1,7 +1,6 @@
 ---
 leyout: post
 title:  tDiary 2.1系の脆弱性対応(2006-12-10)
-date: 2007-12-24 22:34:47 +0900
 categories:
   - release
   - security

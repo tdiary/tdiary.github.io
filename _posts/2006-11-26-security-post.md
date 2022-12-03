@@ -1,7 +1,6 @@
 ---
 leyout: post
 title:  tDiaryの脆弱性に関する報告(2006-11-26)
-date: 2006-11-28 23:21:18 +0900
 categories:
   - security
 ---

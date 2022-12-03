@@ -1,7 +1,6 @@
 ---
 leyout: post
 title:  三種の神器
-date: 2007-07-03 11:22:56 +0900
 categories:
   - plugin
 ---

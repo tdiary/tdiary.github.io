@@ -1,7 +1,6 @@
 ---
 leyout: post
 title: tDiary-5.1.6 リリース
-date: 2021-05-30 00:40:13 +0900
 categories:
   - release
   - 5.1

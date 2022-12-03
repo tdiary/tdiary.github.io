@@ -1,7 +1,6 @@
 ---
 leyout: post
 title:  tDiary-4.1.1 リリース
-date: 2014-12-30 21:40:19 +0900
 categories:
   - release
   - 4.1

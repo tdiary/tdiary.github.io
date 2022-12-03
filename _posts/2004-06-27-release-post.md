@@ -1,7 +1,6 @@
 ---
 leyout: post
 title:  tDiary 2.0.0リリース
-date: 2006-06-12 17:22:28 +0900
 categories:
   - release
 ---

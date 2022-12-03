@@ -1,7 +1,6 @@
 ---
 leyout: post
 title:  tDiary-5.2.2 リリース
-date: 2022-05-29 22:08:46 +0900
 categories:
   - release
   - 5.2

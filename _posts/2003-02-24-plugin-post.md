@@ -1,7 +1,6 @@
 ---
 leyout: post
 title:  カテゴリの使い方
-date: 2007-09-27 16:49:06 +0900
 categories:
   - plugin
 ---

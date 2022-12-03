@@ -1,7 +1,6 @@
 ---
 leyout: post
 title:  開発版2.1.3リリース
-date: 2005-09-29 00:06:37 +0900
 categories:
   - release
 ---

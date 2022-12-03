@@ -1,7 +1,6 @@
 ---
 leyout: post
 title: tDiary-5.1.4 リリース
-date: 2020-11-29 23:37:01 +0900
 categories:
   - release
   - 5.1

@@ -1,7 +1,6 @@
 ---
 leyout: post
 title:  最近多発しているツッコミspamへの対策
-date: 2011-11-03 17:45:14 +0900
 categories:
   - security
   - filter

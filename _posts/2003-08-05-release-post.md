@@ -1,7 +1,6 @@
 ---
 leyout: post
 title:  tDiary 1.5.5リリース
-date: 2007-09-14 14:56:42 +0900
 categories:
   - release
 ---

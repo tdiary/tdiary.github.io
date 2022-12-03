@@ -1,7 +1,6 @@
 ---
 leyout: post
 title:  output_rdf、tb-sendプラグイン使用時の脆弱性
-date: 2004-09-06 20:31:27 +0900
 categories:
   - security
   - plugin

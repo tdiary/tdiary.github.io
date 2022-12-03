@@ -1,7 +1,6 @@
 ---
 leyout: post
 title:  17個の新作テーマ
-date: 2005-12-15 22:54:26 +0900
 categories:
   - theme
 ---
