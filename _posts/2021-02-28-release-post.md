@@ -23,7 +23,7 @@ tDiary 5.1.5 をリリースします。本体に大きな変更・修正はあ�
 ### contrib (tdiary-contrib)の変更点
 * ogpプラグイン: imageプラグインとの協調動作がおかしかったのを修正
 * jholidayプラグイン: 【非互換】サポートの切れた依存ライブラリを差し替え
-** holiday_japan gemが必須になりました。Rack環境ではbundle updateで入ります
+  * holiday_japan gemが必須になりました。Rack環境ではbundle updateで入ります
 * (開発者向け) devcontainerアップデート
 * (開発者向け) CIをGitHub Actionsへ移行
 

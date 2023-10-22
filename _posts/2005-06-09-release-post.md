@@ -22,11 +22,11 @@ categories:
 * その他のバグ修正
 
 ### プラグイン
-!!追加になったプラグイン
+#### 追加になったプラグイン
 * xmlrpc.rb
 * rast-register.rb 
 
-!!修正されたプラグイン
+#### 修正されたプラグイン
 * append-css.rb
 * makerss.rb  
 * category.rb 
@@ -52,7 +52,7 @@ categories:
 * navi_user.rb
 
 ### テーマ
-!!追加になったテーマ
+#### 追加になったテーマ
 * be_r5
 * natrium
 * cherry_brossom
