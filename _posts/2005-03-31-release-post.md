@@ -19,14 +19,14 @@ categories:
 ### plugin
 * いくつかのバグ修正
 * trackback
-** tb-send.rb: デフォルトで「最後に追加したセクション」をTrackBackの対象にした
+  * tb-send.rb: デフォルトで「最後に追加したセクション」をTrackBackの対象にした
 * amazon.rb
-** 'amazon.over18'オプションの追加
-** imgタグにtitle属性を付加
+  * 'amazon.over18'オプションの追加
+  * imgタグにtitle属性を付加
 * a.rb
-** 設定画面対応
+  * 設定画面対応
 * その他
-** 検索エンジンbotのアクセスでは動作をしないようにした
+  * 検索エンジンbotのアクセスでは動作をしないようにした
 
 ### theme
 * 新テーマ: be_r5、natrium、tdiarynet
