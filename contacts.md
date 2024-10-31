@@ -34,7 +34,7 @@ tDiaryのユーザコミュニティであるtDiary-users上には掲示板が�
 ### コミュニティ
 tDiaryを取り巻くコミュニティを紹介します。
 
-!!ユーザコミュニティ
+#### ユーザコミュニティ
 tDiaryのユーザが集まって運営しているサイト、tDiary-usersがあります。Wikiによる豊富なドキュメント、ユーザメーリングリスト、掲示板があります。
 
 * [tDiary-users](http://docs.tdiary.org/users/)
