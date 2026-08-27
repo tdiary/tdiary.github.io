@@ -1,0 +1,46 @@
+name: Update site for tDiary release
+
+on:
+  repository_dispatch:
+    types: [tdiary-release]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Validate payload
+        env:
+          VERSION: ${{ github.event.client_payload.version }}
+          TAG: ${{ github.event.client_payload.tag }}
+        run: |
+          echo "$VERSION" | grep -qE '^[0-9]+\.[0-9]+\.[0-9]+$'
+          test "$TAG" = "v$VERSION"
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Update download page, sidebar and release post
+        env:
+          VERSION: ${{ github.event.client_payload.version }}
+        run: |
+          DATE=$(TZ=Asia/Tokyo date +%Y-%m-%d)
+          ruby .github/scripts/update-release.rb "$VERSION" "$DATE"
+
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: release-${{ github.event.client_payload.version }}
+          title: Update site for tDiary ${{ github.event.client_payload.version }}
+          commit-message: Update site for tDiary ${{ github.event.client_payload.version }}
+          body: |
+            Automated update for the [tDiary ${{ github.event.client_payload.version }} release](https://github.com/tdiary/tdiary-core/releases/tag/${{ github.event.client_payload.tag }}).
+
+            - Update version and download URLs in `download.md`
+            - Update version in `_includes/sidebar.html`
+            - Add a draft release post under `_posts/`
+
+            Please review and edit the release post before merging.
